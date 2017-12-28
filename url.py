@@ -16,7 +16,7 @@ def findUrls(url, parent):
     seen_urls.add(url)
     page = ""
     try:
-        r = requests.get(url)
+        r = requests.get(url, timeout=1)
         if r.status_code == 404:
             print("Invalid :")
             print(url)
