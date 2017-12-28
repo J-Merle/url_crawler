@@ -1,18 +1,26 @@
+import argparse
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-import sys
-
-base_url = sys.argv[1]
-
 
 invalid_urls = set()
 seen_urls = set()
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-v', '--verbose', action='store_true',
+                    help='Display each url requested')
+parser.add_argument('-u', '--url', required=True,
+                    help='The base url to crawl')
+args = parser.parse_args()
+
+base_url = args.url
 
 
 def findUrls(url, parent):
     if url in seen_urls:
         return
+    if args.verbose:
+        print(url)
     seen_urls.add(url)
     page = ""
     try:

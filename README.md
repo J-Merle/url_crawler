@@ -9,7 +9,9 @@ The script takes the root url you want to crawl as argument.
 
 If you want to search for dead links on the repository use:
 
-`python url.py https://github.com/J-Merle/url_crawler`
+`python url.py -u https://github.com/J-Merle/url_crawler`
+
+Type `python url.py --help` for complete parameters list
 
 ## Dependencies
 - [bs4](https://pypi.python.org/pypi/beautifulsoup4/4.3.2 "bs4")
