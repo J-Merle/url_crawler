@@ -1,5 +1,7 @@
 # url_crawler
 
+![pylint Score](https://mperlet.github.io/pybadge/badges/9.81.svg)
+
 Simple scipt to recursively find links on a website and check for dead ones.
 
 ## How to use it ?

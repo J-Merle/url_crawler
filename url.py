@@ -57,7 +57,8 @@ class Crawler(object):
         except (requests.exceptions.InvalidSchema,
                 requests.exceptions.ReadTimeout,
                 requests.exceptions.MissingSchema,
-                requests.exceptions.InvalidURL):
+                requests.exceptions.InvalidURL,
+                requests.exceptions.TooManyRedirects):
             return
         except requests.exceptions.ConnectionError:
             self.invalid_urls.add((url, parent_url))
