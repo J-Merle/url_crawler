@@ -16,6 +16,4 @@ If you want to search for dead links on the repository use:
 Type `python url.py --help` for complete parameters list
 
 ## Dependencies
-- [bs4](https://pypi.python.org/pypi/beautifulsoup4/4.3.2 "bs4")
-- [requests](https://pypi.python.org/pypi/requests "requests")
-- [urllib.parse](https://docs.python.org/3/library/urllib.parse.html "urllib.parse")
+Simply run `pip install -r requirements.txt` to install the needed dependencies
